@@ -13,7 +13,6 @@ const Users = (props) => {
                 props.users.map((value) => {
                     return (
                         <UserItem value={value}/>
-                       
                     )
                 }
                 )
