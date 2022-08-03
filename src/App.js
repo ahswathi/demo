@@ -33,9 +33,14 @@ let App = () => {
     setUsers([])
   }
   return (
+    <>
+      <Router>
+        <Navbar />
+        <Search searchName={searchName} showclear={showclear} clearUsers={clearUsers} />
+        <Users users={users} />
+      </Router>
 
-    <Router>
-    
+      {/* <Router>
         <Navbar />
         <Routes>
         <Route exact path="/" 
@@ -46,14 +51,16 @@ let App = () => {
             </>
         }
         /> 
-        
-       
         <Route exact path="/about" element={<About/>} />
         <Route exact path="/user/:login" element={<UserDetails/>} /> 
         </Routes>
-    
-        
-    </Router>
+    </Router> */}
+
+
+    </>
+
+
+
 
 
   );
