@@ -7,7 +7,7 @@ const Users = (props) => {
     return (
 
         <>
-        <div className="grid  grid-cols-4 lg:grid-cols-4 items-center   mx-[40px]">
+        <div className="grid  grid-cols-4  items-center mb-[4%]  mx-[10%]">
 
             {
                 props.users.map((value) => {
