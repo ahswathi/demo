@@ -13,7 +13,7 @@ const Search = (props) => {
 
     return (
         <>
-            <div className="mx-[30%] mt-[4%]">
+            <div className="mx-[30%] my-[4%]">
                 <form className="form" onSubmit={handleSubmit} >
                     <input type="text" name="text" placeholder="Search here"
                         className="w-full p-2"

@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const UserItem = (props) => {
     const { login, avatar_url } = props.value;
     return (
-        <div className="grid items-center border-4 border-grey-500/50 shadow-lg shadow-blue-500/50 lg:mt-[40px]  lg:px-[20%] lg:h-[300px] lg:w-[300px] lg:py-6">
-            <div className="lg:h-[180px] lg:w-[180px]">
+        <div className="grid items-center border-4 border-grey-500/50 shadow-lg shadow-blue-500/50 lg:mt-[40px]   h-[150px] w-[150px] lg:my-6px">
+            <div className="lg:h-[180px] lg:w-[180px] mx-[20px]">
             <img src={avatar_url} className="items-center rounded-full lg:w-full lg:h-full " />
             </div>
             <p className="text-center font-serif font-bold lg:text-xl lg:p-2"> {login}</p>
