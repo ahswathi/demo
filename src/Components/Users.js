@@ -3,7 +3,7 @@ import UserItem from "./UserItem";
 
 const Users = (props) => {
 
-    /*  console.log(props.users) */
+     console.log(props.users)
     return (
 
         <>
@@ -11,6 +11,7 @@ const Users = (props) => {
 
             {
                 props.users.map((value) => {
+                    console.log(value)
                     return (
                         <UserItem value={value}/>
                     )

@@ -19,9 +19,9 @@ const Search = (props) => {
                         className="w-full p-2"
                         value={text} onChange={(e) => setText(e.target.value)} />
                     <br />
-                    <input type="Submit" className="bg-gray-700 w-[20%] mt-3 p-2 mr-[30%] text-white" value="Submit" />
+                    <input type="Submit" className="bg-gray-700 w-[25%] mt-3 p-2 mr-[25%] text-white" value="Submit" />
                    {props.showclear &&
-                    <button className="w-[20%] p-2 ml-[30%] bg-sky-400" onClick={props.clearUsers}>Clear</button>
+                    <button className="w-[25%] p-2 ml-[25%] bg-blue-700 text-white" onClick={props.clearUsers}>Clear</button>
                 
                 }
 

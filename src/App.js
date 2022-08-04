@@ -13,15 +13,14 @@ let App = () => {
 
   const [users, setUsers] = useState([]);
   const [showclear, setshowclear] = useState(false);
-  /* useEffect(() => {
-    async function fetchData() {
-      // You can await here
-      const response = await axios.get("https://api.github.com/users")
-      setUsers(response.data)
-
-    }
-    fetchData();
-  }, []); */
+  /*  useEffect(() => {
+     async function fetchData() {
+       // You can await here
+       const response = await axios.get("https://api.github.com/users")
+       setUsers(response.data)
+     }
+     fetchData();
+   }, []); */
 
   const searchName = async (name) => {
     const response = await axios.get(`https://api.github.com/search/users?q=${name}`)
@@ -36,33 +35,38 @@ let App = () => {
     <>
       <Router>
         <Navbar />
-        <Search searchName={searchName} showclear={showclear} clearUsers={clearUsers} />
-        <Users users={users} />
-      </Router>
 
-      {/* <Router>
-        <Navbar />
         <Routes>
-        <Route exact path="/" 
-        render={(props) => 
+          <Route path="/" element={
             <>
               <Search searchName={searchName} showclear={showclear} clearUsers={clearUsers} />
               <Users users={users} />
             </>
-        }
-        /> 
-        <Route exact path="/about" element={<About/>} />
-        <Route exact path="/user/:login" element={<UserDetails/>} /> 
+
+          } />
+
+          <Route path="/about" element={<About />} />
+          <Route path="/value/:login" element={<UserDetails />} />
         </Routes>
-    </Router> */}
+      </Router>
 
-
+      {/*  <Router>
+        <Navbar />
+        <Routes>
+          <Route  path="/"
+            render={ props => (
+              <>
+                <Search searchName={searchName} showclear={showclear} clearUsers={clearUsers} />
+                <Users users={users} />
+              </>
+            )
+            }
+          />
+          <Route  path="/about" element={<About />} />
+          <Route  path="/user/:login" element={<UserDetails />} />
+        </Routes>
+      </Router> */}
     </>
-
-
-
-
-
   );
 }
 
